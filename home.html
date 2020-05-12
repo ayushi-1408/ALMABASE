@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>home</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+  
+.a{
+	width: 100%;
+	height: 550px;
+	position: relative;
+	z-index: 1;
+}
+.b{
+	width:100%;
+	height: 550px;
+	position: absolute;
+	z-index: 2;
+}
+.overlay{
+	height: 500px ;
+	 width: 100%;
+	 background-color: rgba(0,0,0,0.7);
+	 position: absolute;
+	 z-index: 3;
+}
+.content{
+	margin-top: 250px;
+	margin-left: 200px;
+	height: 150px;
+	width: 300px;
+	position: absolute;
+	z-index: 4;
+}
+.v{
+	position: absolute;
+	z-index: 4;
+}
+.nav-item{
+	margin-left: 60px;
+	font-size: 17px;
+}
+.navbar{
+	background-color: rgba(0,0,0,0);
+
+}
+.nav-link{
+	color: white;
+
+}
+.navbar-brand{
+	color: rgba(255,140,0,1);
+	margin-left: 20px;
+	font-size: 35px;
+}
+.cover{margin-top: 10px;
+	width: 100%;
+	height: 330px;
+	
+}
+.notices{width: 25%;
+	height: 330px;
+	
+	float: left;
+	margin-left: 25px;
+
+
+}
+.about{
+	width: 65%;
+	height:330px;
+
+	float: right;
+	margin-right: 35px;
+	background-color: rgba(34,167,240,0.7);
+}
+.events{
+width: 100%;
+height: 550px;
+margin-top: 100px;
+
+}
+
+
+
+.right{
+		float:left;
+		width: 30%;
+		 display: inline-block;
+		
+		}
+	.left{
+		float: left;
+		 display: inline-block;
+		
+		
+	}
+
+.p{
+width: 23%;
+	height: 250px;
+
+	position: relative;
+	z-index: 1;
+}
+.over{
+	width: 100%;
+	height: 250px;
+	
+	position:absolute;
+	z-index: 3;
+}
+.contents{
+	width: 100%;
+	height: 250px;
+	background-color: rgba(0,0,0,0);
+	position: absolute;
+	z-index: 3;
+
+
+}
+.over:hover{
+	background-color: rgba(0,0,0,0.5);
+}
+.contents:hover{
+color:rgba(0,0,0,0);
+}
+.i:hover{
+color:rgba(255,255,255,1);
+}
+.quick a{
+color: white; 
+font-size: 18px;
+
+}
+.quick{
+	margin-top: 40px;
+	margin-left: 200px;
+	list-style-type: none;
+}
+.quick li{
+	margin-top: 20px;
+}
+.glow {
+ 
+  color: #fff;
+  text-align: center;
+
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00E5EE, 0 0 40px #00E5EE, 0 0 50px #00E5EE, 0 0 60px #00E5EE, 0 0 70px #00E5EE;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #00E5EE, 0 0 40px #00E5EE, 0 0 50px #00E5EE, 0 0 60px #00E5EE, 0 0 70px #00E5EE , 0 0 80px #00E5EE;
+    
+  }
+}
+
+
+.body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: rgba(0,0,0,0);
+  color: white;
+  display: inline-block;
+  padding-right: 20px;
+ margin-top: 0px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+
+
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: red;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+</style>
+
+
+</head>
+<body>
+	<div class="container-fluid">
+		
+			<div class="a">
+		<div id="demo" class="carousel slide b" data-ride="carousel">
+<nav class="navbar navbar-expand-sm   v" >
+      
+  <a class="navbar-brand  glow" href="#"><em>ALMABASE</em></a>
+ 
+
+  
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link glow" href="home.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link glow" href="about.html" tabindex="-1" aria-disabled="true">About us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link glow" href="#">Group chat</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  glow" href="#" >
+         Members
+        </a>
+       
+      </li>
+      <li class="nav-item">
+        <a class="nav-link glow" href="#" tabindex="-1" aria-disabled="true">Events</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link glow" href="formvalidity.html" tabindex="-1" aria-disabled="true">Login</a></li>
+         
+      <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; margin-right:20px" class="nav-item nav-link glow" >
+        Sign in</button>
+        <div class="body">
+
+
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit" style="background-color: blue">Sign in</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</div>
+
+      
+      </li>
+    </ul>
+    
+  
+</nav>
+<div class="overlay"></div>
+<div class="content "> 
+<h3 style="color: white; font-weight: bold; font-size: 35px;"> Welcome to <b>KIET </b>Association Alumini</h3>
+
+</div>
+
+  <!-- Indicators -->
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="kiet.jpg" style="  width: 100% ;height: 500px">
+    </div>
+    <div class="carousel-item">
+      <img src="alumini.jpg"  style="  width: 100%; height: 500px">
+    </div>
+    <div class="carousel-item">
+      <img src="meet.jpg"  style="  width: 100%; height: 500px">
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    
+  </a>
+
+</div>
+
+	</div>
+	<div class="cover">	
+<div class="notices">
+	<marquee direction="up"><ul style="list-style: none" id="pi">
+		<li>ARIIA Review data</li><br>
+		<li>KIET is now Academic partner of E&ICT, IIT Roorkee</li><br>
+		<li>International conference IAIHC-2020 on February 21-22,2020 By KSOP</li><br>
+		<li>4th International Conference ICCE-2020, by KIET  ECE Department on 28th-29th November,2020</li><br>
+		<li>Fifth international conference- RTHTMS-2020 on 07-08 february, 2020</li><br>
+	</ul></marquee>
+
+
+
+
+</div>
+	<div class="about">
+		<p style="color: rgba(255,255,255,1); font-size: 22px;padding-left: 50px;padding-top: 25px;" id="i">This website is used to maintain data of Alumni and to provide a platform where Alumni can see the progress of an institution and also participate in improving institution condition with help of donation.<br>
+
+Almabase Alumni Management Software deals in providing each and everything you need to achieve alumni data on website & mobile devices to build a strong alumni community.<br> Both alumni and faculty can do online registration and after that administrator can approve registration and permit alumni to intermingle and acquaintance with their institution for years to come.</p>
+	</div>
+</div>
+	</div>
+
+<div   class="events">
+	
+<p style="text-align: center; font-size: 18px"><b>HAPPENINGS</b></p>
+<a href="a3.jpg" style="color: rgba(0,0,0,0)">
+<div class="p" style="display: inline-block; width: 25% ; margin-left: 110px">
+	<div class="over">
+<div class="contents" ><h4 class="i" style="padding-left: 50px; padding-top: 50%;" >INNOMPIC'19</h4></div></div>
+	<img src="a3.jpg" style="width: 100%;height: 250px;"></a>
+
+
+</div>
+<a href="c5.jpg" style="color: rgba(0,0,0,0)">
+<div class="p" style="float: left;display: inline-block;margin-left: 80px"><div class="over"><div class="contents" ><h4 class="i" style="padding-left: 50px; padding-top: 50%;" >NASA WINNERS</h4></div></div>
+	<img src="c5.jpg" style="width: 100%; height: 250px; ;"></a></div>
+   
+
+   <a href="c9.jpg"style="color: rgba(0,0,0,0)"> 
+   	<div class="p" style="float: right;display: inline-block; margin-right: 70px"><div class="over"><div class="contents" ><h4 class="i" style="padding-left: 50px; padding-top: 50%;">STREET SHOW</h4></div></div>
+   	<img src="c9.jpg" style="width: 100%; height: 250px;"></a></div>
+
+
+
+  <a href="k1.jpg"style="color: rgba(0,0,0,0)"> 
+<div class="p"  style="float: left;display: inline-block; margin-top: 40px; margin-left: 80px ">
+	<div class="over"  >
+	<div class="contents" >
+		<h4 class="i" style="padding-left: 50px; padding-top: 50%;">DIANOBOTS</h4></div></div>
+   <img src="k1.jpg" style="width: 100%; height: 250px; "></a></div>
+
+
+
+  <a href="k2.jpg" style="color: rgba(0,0,0,0)"> <div class="p"  style="float: left;display: inline-block;width: 25%;margin-top: 40px; margin-left: 110px">
+  	
+  	<div class="over">	
+  <div class="contents" ><h4 class="i" style="padding-left: 50px; padding-top: 50%;">MARATHON</h4></div></div><img src="k2.jpg" style="width: 100%; height: 250px; "> </a></div>
+  
+  
+
+  <a href="k4.jpg" style="color: rgba(0,0,0,0)"> 
+   	<div class="p"  style="float: left;display: inline-block; margin-top: 40px; margin-left: 90px;">
+   		<div class="over">
+   	<div class="contents" ><h4 class="i" style="padding-left: 50px; padding-top: 50%;">SIH'19</h4></div></div>
+   	<img src="k4.jpg" style="width: 100%; height: 250px;"></a></div>
+
+</div>
+
+
+
+
+
+	<div class="support" style="width: 100% ;height:200px ;margin-top:40px;">
+		
+<img src="aicte.jpeg" style="width: 20% ; height: 140px;margin-left: 120px;" >
+<img src="aktu.png" style="width: 10% ; height: 140px;margin-left: 20px;">
+<img src="iste.jpg" style="width: 15% ;height:180px;margin-left: 20px; ">
+<img src="NAAC.jpg" style="width: 15%; height: 140px; ">
+<img src="nba.jpg" style="width: 10%; height: 140px">
+
+
+	</div>
+	<hr>
+<div class="last" style="margin-top: 50px;">
+<div class="right" style="margin-left: 380px;">	<ul style=" list-style: none;display: inline-block;"><li ><b>Quick Find</b></li>
+		
+<li>Vendor's Corner</li>
+<li>Facilities</li>
+<li>Webmail</li>
+<li>Founders & Governors</li>
+<li>Academic Leadership</li>
+<li>Recognitions</li>
+<li>Infrastructure</li>
+<li>Campus Diary</li>
+</div></ul>
+
+<ul style=" list-style: none;display: inline-block;">
+<div class="left">
+<li><b>IMPORTANT</b></li>
+
+<li>How to Apply</li>
+
+<li>FAQ's</li>
+<li>Apply Online</li>
+
+
+
+</ul></div>
+<div class="row" style="margin-top: 200px;">
+	<div class="col-sm-4 col-md-4 col-lg-4 glow" style="height: 300px; background-color: black; ">
+		<h3 style="color: white;margin-top:100px;font-size:35px;">Almabase</h3>
+	</div>
+<div class="col-sm-8 col-md-8 col-lg-8" style="height: 300px; background-image: radial-gradient(rgba(34,167,240,0.3),rgba(34,167,240,1)) ; ">
+	<ul class="quick">
+		<li><a href="terms.html">DISCLAIMER AND POLICIES</a></li>
+		<li><a href="about.html">ABOUT</a></li>
+		<li><a href="">GALLERY</a></li>
+	</ul>
+	<p style="margin-top: 60px">© 2019 KIET Group of Institutions - All Rights Reserved</p>
+</div>
+
+
+</div>
+	 
+
+
+
+
+
+</body>
+</html>
